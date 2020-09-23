@@ -16,11 +16,11 @@ public class PointAndClickNav : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            RaycastHit hit;
+            RaycastHit[] hits = Physics.RaycastAll(Camera.main.ScreenPointToRay(Input.mousePosition));
 
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
+            foreach (RaycastHit h in hits)
             {
-                agent.destination = hit.point;
+                agent.destination = h.point;
             }
         }
     }
