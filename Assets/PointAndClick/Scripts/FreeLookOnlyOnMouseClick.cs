@@ -14,7 +14,7 @@ public class FreeLookOnlyOnMouseClick : MonoBehaviour
     {
         if (axisName == "Mouse X")
         {
-            if (Input.GetMouseButton(1))
+            if (Input.GetMouseButton(2))
             {
                 return Input.GetAxis("Mouse X");
             }
@@ -25,7 +25,7 @@ public class FreeLookOnlyOnMouseClick : MonoBehaviour
         }
         else if (axisName == "Mouse Y")
         {
-            if (Input.GetMouseButton(1))
+            if (Input.GetMouseButton(2))
             {
                 return Input.GetAxis("Mouse Y");
             }

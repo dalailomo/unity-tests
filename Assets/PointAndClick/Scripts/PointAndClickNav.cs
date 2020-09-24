@@ -20,7 +20,10 @@ public class PointAndClickNav : MonoBehaviour
 
             foreach (RaycastHit h in hits)
             {
-                agent.destination = h.point;
+                if (h.collider.tag == "NavPoint") 
+                {
+                    agent.destination = h.point;
+                };
             }
         }
     }
